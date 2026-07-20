@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CloudScale Dynamics Asset State Schema",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "human",
+                "service"
+            ]
+        },
+        "mfa": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "sms",
+                "hardware",
+                "app",
+                null
+            ]
+        },
+        "privileged": {
+            "type": "boolean"
+        },
+        "owner": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "credential_age_days": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "classification": {
+            "type": "string",
+            "enum": [
+                "public",
+                "internal",
+                "confidential",
+                "restricted"
+            ]
+        },
+        "encryption": {
+            "type": "string",
+            "enum": [
+                "none",
+                "provider-managed",
+                "customer-managed"
+            ]
+        },
+        "log_sink": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "public": {
+            "type": "boolean"
+        },
+        "disk_encrypted": {
+            "type": "boolean"
+        },
+        "edr_healthy": {
+            "type": "boolean"
+        },
+        "last_seen": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "managed": {
+            "type": "boolean"
+        },
+        "approved_by": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "compensating_control": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "expires_at": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "reason": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "additionalProperties": false
+}
