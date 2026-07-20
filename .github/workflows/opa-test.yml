@@ -1,0 +1,36 @@
+name: OPA Policy Governance CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-policies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Install Open Policy Agent (OPA)
+        uses: open-policy-agent/setup-opa@v2
+        with:
+          opa-version: latest
+
+      - name: Run Unit Test Suite
+        run: python -m pytest
+
+      - name: Compile Policy Bundle
+        run: opa build --v0-compatible -b policy-bundle/
