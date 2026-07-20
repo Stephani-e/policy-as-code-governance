@@ -1,0 +1,4 @@
+gap_id,source_artifact,exact_locator,gap_type,risk_statement,NIST_CSF_Reference,ISO_27001_Reference,why_it_applies,evidence_needed,priority,decision
+G-001,public-fixtures.json,test_identity_mfa,Policy,Unauthorized administrative access via weak authentication factors.,PR.AC-07,A.9.4.2,Ensures privileged accounts use robust verification.,MFA configuration logs.,High,Mitigated
+G-002,public-fixtures.json,test_storage_encryption,Implementation,Exposure of sensitive data at rest in cloud buckets.,PR.DS-01,A.8.24,Mandates cryptographic protection for stored assets.,Encryption status reports.,High,Mitigated
+G-003,public-fixtures.json,test_endpoint_health,Process,Compromise of unpatched or non-compliant worker endpoints.,DE.CM-08,A.8.8,Verifies endpoint security baselines continuously.,Endpoint health telemetry.,Medium,Mitigated

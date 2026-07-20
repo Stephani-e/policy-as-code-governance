@@ -32,13 +32,26 @@ UBI-2026-0158-PolicyAsCode/
 ├── .github/
 │   └── workflows/
 │       └── opa-test.yml       # GitHub Actions CI/CD automation pipeline
-├── policy-bundle/
+├── policy-bundle/             # Core OPA Rego governance policies
 │   ├── .rego-version          # OPA version compatibility lock
 │   └── policy.rego            # Core Rego policy logic and violation rules
-├── tests/
+├── schemas/                   # Strict JSON input validation schemas
+│    └── input-schema.json     # OPA version compatibility lock
+├── tests/                     # Pytest fixtures and automated validation scripts
 │   ├── policy_test.py         # Pytest test harness executing mock fixtures
 │   └── fixtures/              # Infrastructure state test fixtures (P-OPA-01 to 18)
-├── requirements.txt           # Python project dependencies
+├── assessment-manifest.json   # Submission metadata & environment specs
+├── bundle.tar.gz    
+├── compliance-report.json     # Machine-readable test execution output
+├── continuity-record.md       # Stage 6 transition and handoff directives
+├── control-mapping.csv        # NIST CSF 2.0 & ISO 27001 compliance map
+├── decision-log.md            # Formal risk deferral & design choices
+├── evidence-index.csv         # Granular cryptographic evidence index
+├── integrity-attestation.md   # Signed candidate anti-tamper declaration
+├── policy-gap-report.pdf      # Executive risk and control gap analysis
+├── policy-addendum.pdf        # Supplementary architectural addendum
+├── manifest.sha256            # Checksum manifest for all package artifacts
+├── public-figures.json        # OPA test fixtures suite (18 test cases)
 └── README.md                  # Project documentation
 ```
 

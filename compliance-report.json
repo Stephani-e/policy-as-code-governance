@@ -1,0 +1,16 @@
+{
+  "marker": "UBI-A5-1F37CF01A74C",
+  "variant": "V1",
+  "evaluation_timestamp": "2026-07-20T17:45:16Z",
+  "engine": "Open Policy Agent (OPA)",
+  "bundle_version": "v0-compatible",
+  "controls_evaluated": [
+    "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+    "NF.STORAGE.RESTRICTED_PROTECTION",
+    "NF.ENDPOINT.MANAGED_HEALTH"
+  ],
+  "total_fixtures_tested": 18,
+  "passed_fixtures": 18,
+  "failed_fixtures": 0,
+  "status": "COMPLIANT_WITH_EXCEPTIONS"
+}

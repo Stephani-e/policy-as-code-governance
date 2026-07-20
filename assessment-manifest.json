@@ -1,0 +1,31 @@
+{
+  "candidate_binding": "UBI-2026-0158",
+  "evidence_marker": "UBI-A5-1F37CF01A74C",
+  "assigned_archive": {
+    "filename": "grc-stage-5-shared-b1.tar.gz",
+    "sha256": "35401db7422c5a289692ad33b8d0a69d2abcd668379709caa6bfbf38e9948ccb",
+    "manifest_signature": "7568157c9cf9710fc58e452698f5f014c2afb8baeb5016ccb90a0b4fb8902e61"
+  },
+  "environment": {
+    "python_version": "3.11",
+    "opa_version": "latest",
+    "os": "Ubuntu 22.04 LTS"
+  },
+  "execution": {
+    "frozen_commit": "HEAD",
+    "commands": {
+      "clean": "rm -rf .pytest_cache compliance-report.json bundle.tar.gz",
+      "provision": "pip install pytest",
+      "build": "opa build -b policy-bundle/ -o bundle.tar.gz",
+      "test": "opa test policy-bundle/ tests/public-fixtures.json"
+    },
+    "metrics": {
+      "runtime_seconds": 1.4,
+      "peak_memory_mb": 42
+    },
+    "outputs": {
+      "test_report_locator": "compliance-report.json",
+      "compliance_report_hash": "PENDING_FINAL_HASH"
+    }
+  }
+}
