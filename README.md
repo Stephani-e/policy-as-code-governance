@@ -40,3 +40,42 @@ UBI-2026-0158-PolicyAsCode/
 │   └── fixtures/              # Infrastructure state test fixtures (P-OPA-01 to 18)
 ├── requirements.txt           # Python project dependencies
 └── README.md                  # Project documentation
+```
+
+## Getting Started
+
+### 1. Prerequisites
+* Python 3.10+
+* Open Policy Agent (OPA) CLI installed locally.
+
+### 2. Installation & Local Setup
+Clone the repository and install test dependencies:
+
+```cmd
+git clone [https://github.com/Stephani-e/policy-as-code-governance.git](https://github.com/Stephani-e/policy-as-code-governance.git)
+cd policy-as-code-governance
+pip install pytest
+```
+
+## Running Tests & Compiling Bundles
+
+### 1. Run the Unit Test Suite
+Execute the pytest harness to evaluate all 18 infrastructure test fixtures against the Rego policy engine:
+
+```cmd
+python -m pytest
+```
+
+### 2. Build the Production Policy Bundle
+Compile your Rego policies into a secure, portable distribution tarball using OPA v0 compatibility mode:
+
+```cmd
+opa build --v0-compatible -b policy-bundle/
+```
+
+## CI/CD Automation
+This repository features continuous integration via GitHub Actions. Every push and pull request automatically triggers:
+
+* Python environment provisioning.
+* Execution of the full pytest regression suite.
+* Compilation and syntax verification of the OPA policy bundle.
