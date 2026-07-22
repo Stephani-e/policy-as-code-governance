@@ -25,7 +25,7 @@
     },
     "outputs": {
       "test_report_locator": "compliance-report.json",
-      "compliance_report_hash": "PENDING_FINAL_HASH"
+      "compliance_report_hash": "0a92734a42590589dde385bf45de9833e88de6810e069981580df041a8770b85"
     }
   }
 }
