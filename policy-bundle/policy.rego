@@ -28,9 +28,7 @@ violation_code = v {
     v := violations[_]
 }
 
-# -----------------------------------------------------------------------------
 # CONTROL ASSIGNMENT (Robust mapping with process of elimination)
-# -----------------------------------------------------------------------------
 primary_control_id = "NF.STORAGE.RESTRICTED_PROTECTION" {
     input.input.classification != null
 }
@@ -68,9 +66,8 @@ primary_control_id = "NF.IDENTITY.PRIVILEGED_ASSURANCE" {
 
 default primary_control_id = "UNKNOWN"
 
-# -----------------------------------------------------------------------------
+
 # VIOLATIONS COLLECTION SET
-# -----------------------------------------------------------------------------
 
 # CONTROL 1: NF.IDENTITY.PRIVILEGED_ASSURANCE
 violations["IDENTITY_MFA_WEAK"] {
@@ -149,9 +146,7 @@ violations["EXCEPTION_INCOMPLETE"] {
     has_missing_field
 }
 
-# -----------------------------------------------------------------------------
 # HELPER RULES
-# -----------------------------------------------------------------------------
 current_time_ns := 1784561728000000000 
 
 valid_exception {

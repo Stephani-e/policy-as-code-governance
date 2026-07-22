@@ -19,7 +19,7 @@ def test_policy_fixtures(case):
     # Run the OPA evaluation engine using --v0-compatible and --stdin-input
     try:
         process = subprocess.run(
-            ["opa", "eval", "-d", "policy-bundle/policy.rego", "--v0-compatible", "--stdin-input", "data.governance.decision"],
+            ["opa", "eval", "-d", "policy-bundle/policy.rego", "--v0-compatible", "--stdin-input","data.governance.decision"],
             input=json.dumps(opa_input),
             capture_output=True,
             text=True,

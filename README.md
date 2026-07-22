@@ -14,7 +14,7 @@ The policy bundle evaluates and maps resources against three core enterprise sec
    * Restricts stale credentials on privileged service accounts beyond acceptable age thresholds (`IDENTITY_CREDENTIAL_STALE`).
 
 2. **`NF.STORAGE.RESTRICTED_PROTECTION`**
-   * Prevents restricted or sensitive classification data from being exposed publicly (`STORAGE_PUBLIC`).
+   * Prevents restricted or sensitive classification data from being publicly exposed (`STORAGE_PUBLIC`).
    * Mandates robust encryption standards across confidential and restricted assets (`STORAGE_UNENCRYPTED`).
    * Requires mandatory audit log sinks for restricted storage elements (`STORAGE_LOG_MISSING`).
 
